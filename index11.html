@@ -269,26 +269,29 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
   <!-- End page content -->
 </div>
-<script>
-        (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
-    v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
-        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-        y=e.createElement(n);y.async=!0;y.src='https://pendo-dev-static.storage.googleapis.com/agent/static/'+apiKey+'/pendo.js';
-        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
-
-                "visitor": {
-                    "id": "1234567891011IDQUDev"
-                   
-                },
-                "account": {
-                    "id": "1234567891011acIdQUDev",
-                    "name": "Account1QUDev",
-                    "monthly_value": 7770,
-                    "is_paying": true
-                },
-            });
-    })('6ff4a86f-4cdc-4d18-60f0-d32ee1acee5d'); 
-</script>
+ 	<script>
+			(function(apiKey){
+				(function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+				v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+					o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+           y=e.createElement(n);y.async=!0;y.src='https://pendo-dev-static.storage.googleapis.com/agent/static/'+apiKey+'/pendo.js';
+					z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+					// Call this whenever information about your visitors becomes available
+					pendo.initialize({
+						"visitor": {
+							"id": "QUID123456",	
+							"email": "irena.grocka+QUWEU001@pendo.io",
+							"full_name": "WUDebWU001"
+						},
+						"account": {
+							"id": "Acc123QUDev",
+							"name": "QUDev account",
+							"monthly_value": 134612,
+							"is_paying": true
+						},
+					});
+				})('6ff4a86f-4cdc-4d18-60f0-d32ee1acee5d');
+		</script>
 <script>
 // Get the Sidebar
 var mySidebar = document.getElementById("mySidebar");
